@@ -1,0 +1,20 @@
+{
+    "name": "タンパク Markdown",
+    "version": "0.1",
+    "description": "Markdown で書かれたタンパクの記事を Markdown 化するためのプラグインです",
+    "permissions" : [
+        "tabs",
+        "http://tanpaku.grouptube.jp/"
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "background_page" : "background.html",
+    "browser_action": {
+        "default_icon": "icon19.png",
+        "default_title": "タンパク Markdown",
+        "popup": "popup.html"
+    }
+}
