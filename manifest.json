@@ -16,5 +16,9 @@
         "default_icon": "icon19.png",
         "default_title": "タンパク Markdown",
         "popup": "popup.html"
-    }
+    },
+    "content_scripts": [{
+      "matches": ["http://tanpaku.grouptube.jp/*"],
+      "js": ["jquery-1.6.1.min.js", "showdown.js", "content.js"]
+    }]
 }
