@@ -19,6 +19,7 @@
     },
     "content_scripts": [{
       "matches": ["http://tanpaku.grouptube.jp/*"],
-      "js": ["jquery-1.6.1.min.js", "showdown.js", "content.js"]
+      "js": ["jquery-1.6.1.min.js", "showdown.js", "content.js"],
+      "css": ["content.css"]
     }]
 }

@@ -1,0 +1,9 @@
+.diary_body ul, .diary_body ol {
+    margin: 0.5em auto;
+}
+.diary_body ul li {
+    margin-left: 1.5em;
+}
+.diary_body ol, li {
+    margin-left: 1em;
+}
