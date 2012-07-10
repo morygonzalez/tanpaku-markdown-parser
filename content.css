@@ -1,9 +1,14 @@
-.diary_body ul, .diary_body ol {
+.parsed p {
+    margin: 1em;
+}
+.parsed ul,
+.parsed ol {
     margin: 0.5em auto;
 }
-.diary_body ul li {
+.parsed ul li {
     margin-left: 1.5em;
 }
-.diary_body ol, li {
+.parsed ol, li {
     margin-left: 1em;
 }
+
