@@ -1,14 +1,9 @@
 .parsed p {
-    margin: 1em;
+    margin: 1em 0;
 }
-.parsed ul,
-.parsed ol {
-    margin: 0.5em auto;
+.parsed ul, .parsed ol {
+    margin: 0.5em 0;
 }
-.parsed ul li {
-    margin-left: 1.5em;
+.parsed ul li, .parsed ol li {
+    margin-left: 1.3em;
 }
-.parsed ol, li {
-    margin-left: 1em;
-}
-
