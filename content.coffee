@@ -1,8 +1,9 @@
-DiaryBody = $('.diary_body').text()
-  .replace(/^\s+?([^\s]+)/g, "$1")
-  .replace(/\s+$/g, '')
-  .replace(/([^\n])\n([^\n])/g, "$1  \n$2")
-  .replace(/(^|\s)(https?:\/\/[a-zA-Z0-9\.\-_~#!%\?&\/]+?)(\s|$)/g, '$1<a href="$2">$2</a>$3')
-converter = new Showdown.converter
-DiaryBodyHtml = converter.makeHtml DiaryBody
-$('.diary_body').attr(class: 'diary_body parsed').html(DiaryBodyHtml)
+$('.diary_body, .comment-body').each ->
+  TargetText = $(this).text()
+    .replace(/^\s+?([^\s]+)/g, "$1") # 行頭の空白削除
+    .replace(/\s+$/g, '') # 行末の空白削除
+    .replace(/([^\n])\n([^\n])/g, "$1  \n$2") # 改行を空白二個に変換
+    .replace(/(^|\s)(https?:\/\/[a-zA-Z0-9\.\-_~#!%\?&\/]+?)(\s|$)/g, '$1<a href="$2">$2</a>$3') # URL っぽい文字列を URL に変換
+  Converter = new Showdown.converter
+  BodyHtml = Converter.makeHtml TargetText
+  $(this).attr(class: $(@).attr('class') + ' parsed').html(BodyHtml)
